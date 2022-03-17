@@ -50,28 +50,28 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         alert("Fuel and Cargo fields must be numbers");
      }
      else {
-         pilotStatus.innerHTML = `Pilot ${pilot} is ready!`;
-         copilotStatus.innerHTML = `Co-Pilot ${copilot} is ready!`;
+         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
+         copilotStatus.innerHTML = `Co-Pilot ${copilot} is ready for launch`;
      }
  
      if(fuelLevel<10000){
          list.style.visibility = "visible";
-         fuelStatus.innerHTML = "Not enough fuel for the journey";
-         launchStatus.innerHTML = "Shuttle not ready for launch";
-         launchStatus.style.color = "#FF0000";
+         fuelStatus.innerHTML = "Fuel level too low for launch";
+         launchStatus.innerHTML = "Shuttle Not Ready for Launch";
+         launchStatus.style.color = "rgb(199, 37, 78)";
      }
      if(cargoLevel>10000){
          list.style.visibility = "visible";
-         cargoStatus.innerHTML = "Too much mass for the shuttle to take off.";
-         launchStatus.innerHTML = "Shuttle not ready for launch";
-         launchStatus.style.color = "#FF0000";
+         cargoStatus.innerHTML = "Cargo mass too heavy for launch";
+         launchStatus.innerHTML = "Shuttle Not Ready for Launch";
+         launchStatus.style.color = "rgb(199, 37, 78)";
      }
      if (fuelLevel>10000 && cargoLevel<10000){
          list.style.visibility = "visible";
          fuelStatus.innerHTML = "Fuel level high enough for launch";
          cargoStatus.innerHTML = "Cargo mass low enough for launch";
          launchStatus.innerHTML = "Shuttle ready for launch";
-         launchStatus.style.color = "00FF00";
+         launchStatus.style.color = "rgb(199, 37, 78)";
 
      }
  }
