@@ -68,6 +68,13 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         launchStatus.innerHTML = `Shuttle Not Ready for Launch.`;
         launchStatus.style.color = "rgb(199, 37, 78)";
      }
+
+     if (cargoMass > 10000 && fuelLevel < 10000) {
+        list.style.visibility = "visible";
+        cargoStatus.innerHTML = `Cargo mass too heavy for launch`;
+        fuelStatus.innerHTML = `Fuel level too low for launch`;
+        launchStatus.innerHTML = `Shuttle Not Ready for Launch.`;
+        launchStatus.style = "rgb(199, 37, 78)";
   
      if (fuelLevel >= 10000 && cargoMass <= 10000) {
         list.style.visibility = "visible";
