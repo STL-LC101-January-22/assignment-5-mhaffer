@@ -67,10 +67,10 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     }
      
     if (cargoMass > 10000) {
-        cargoStatus.innerHTML = `Cargo mass to heavy for launch`;
+        cargoStatus.innerHTML = `Cargo mass low enough for launch`;
         launchReady = false;
      } else {
-        document.getElementById("cargoStatus").innerHTML = `Cargo mass low enough for launch`;
+        document.getElementById("cargoStatus").innerHTML = `Cargo mass too heavy for launch`;
     }
   
     if (launchReady === false) {
