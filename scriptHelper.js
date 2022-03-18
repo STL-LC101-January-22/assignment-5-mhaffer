@@ -70,6 +70,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
      }
   
      if (fuelLevel >= 10000 && cargoMass <= 10000) {
+        list.style.visibility = "visible";
         launchStatus.style.color = "rgb(65, 159, 106)";
         launchStatus.innerHTML = `Shuttle is Ready for Launch`
      }
