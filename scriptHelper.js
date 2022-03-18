@@ -84,7 +84,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
 
     }
-  
+ } 
  
  async function myFetch() {
      let planetsReturned;
