@@ -54,7 +54,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
          copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
      }
  
-     if (fuelLevel < 10000) {
+    /* if (fuelLevel < 10000) {
         list.style.visibility = 'visible';
         document.getElementById('fuelStatus').innerHTML = 'Fuel level too low for launch';
         document.getElementById('launchStatus').innerHTML = 'Shuttle Not Ready for Launch';
@@ -84,11 +84,29 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         document.getElementById('launchStatus').innerHTML = 'Shuttle Not Ready for Launch';
         document.getElementById('launchStatus').style.color = 'rgb(199, 37, 78)';
     }
+    */
+
+    if (fuelLevel < 10000) {
+        faultyItems.style.visibility = "visible";
+        fuelStatus.innerHTML = `Fuel level too low for launch`;
+        launchStatus.innerHTML = `Shuttle Not Ready for Launch`;
+        launchStatus.style.color = "rgb(199, 37, 78)";
+     } 
+     
+     if (cargoMass > 10000) {
+        faultyItems.style.visibility = "visible";
+        cargoStatus.innerHTML = `Cargo mass too heavy for launch`;
+        launchStatus.innerHTML = `Shuttle Not Ready for Launch.`;
+        launchStatus.style.color = "rgb(199, 37, 78)";
+     }
+  
+     if (fuelLevel >= 10000 && cargoMass <= 10000) {
+        launchStatus.style.color = "rgb(65, 159, 106)";
+        launchStatus.innerHTML = `Shuttle is Ready for Launch`
+     }
 
  
- 
- 
- 
+  
  
  async function myFetch() {
      let planetsReturned;
